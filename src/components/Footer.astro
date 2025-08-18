@@ -3,28 +3,86 @@
 ---
 
 <footer class="footer mt-auto py-4 bg-light border-top">
-    <div class="container text-center">
-        <div class="mb-2">
-            <a href="https://www.instagram.com/laranadepepito/" class="mx-2 text-dark"
-                ><i class="bi bi-instagram"></i> Instagram</a
-            >
-            <a href="https://www.facebook.com/laranadepepito.vigo" class="mx-2 text-dark"
-                ><i class="bi bi-facebook"></i> Facebook</a
-            >
-            <a href="mailto:merchi.cos@gmail.com" class="mx-2 text-dark"
-                ><i class="bi bi-envelope"></i> Email</a
-            >
-        </div>
-        <div class="small text-muted">
-            &copy; {new Date().getFullYear()} La Rana De Pepito. Todos los derechos
-            reservados.
-        </div>
+  <div class="container text-center">
+    <div class="mb-2">
+      <a
+        href="https://www.instagram.com/laranadepepito/"
+        class="mx-2 text-dark"
+        aria-label="Instagram"
+        target="_blank"
+        rel="noopener"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;">
+          <rect width="24" height="24" rx="6" fill="#fff" />
+          <rect x="6.5" y="6.5" width="11" height="11" rx="2" stroke="#333" stroke-width="1.4" fill="none" />
+          <circle cx="12" cy="12" r="2.6" stroke="#333" stroke-width="1.4" fill="none" />
+          <circle cx="16.5" cy="8" r="0.6" fill="#333" />
+        </svg>
+      </a>
+      <a
+        href="https://www.facebook.com/laranadepepito.vigo"
+        class="mx-2 text-dark"
+        aria-label="Facebook"
+        target="_blank"
+        rel="noopener"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style="vertical-align:middle;"
+          ><rect width="24" height="24" rx="6" fill="#fff"></rect><path
+            d="M15.5 8.5h-2V7.5c0-.4.3-.5.5-.5h1.5V5h-2c-1.7 0-2.5 1-2.5 2.5V8.5H8v2h2v6h3v-6h2l.5-2z"
+            fill="#1877F3"></path></svg
+        >
+      </a>
+      <a
+        href="mailto:merchi.cos@gmail.com"
+        class="mx-2 text-dark"
+        aria-label="Email"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style="vertical-align:middle;"
+          ><rect width="24" height="24" rx="6" fill="#fff"></rect><path
+            d="M4 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8zm2 0l6 5 6-5"
+            stroke="#333"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path></svg
+        >
+      </a>
     </div>
+    <div class="small text-muted">
+      &copy; {new Date().getFullYear()} La Rana De Pepito. Todos los derechos reservados.
+    </div>
+  </div>
 </footer>
 
 <style>
-    .footer {
-        font-family: "Times New Roman", serif;
-        font-size: 1rem;
-    }
+  .footer {
+    font-family: "Times New Roman", serif;
+    font-size: 1rem;
+  }
+  .footer a {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer a svg {
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform .12s ease, opacity .12s ease;
+  }
+  .footer a:hover svg {
+    transform: translateY(-2px);
+    opacity: 0.9;
+  }
 </style>
