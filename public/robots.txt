@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://merchi.es/sitemap.xml
+Sitemap: https://laranadepepito.es/sitemap.xml

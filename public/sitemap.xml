@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://merchi.es/</loc>
+    <loc>https://laranadepepito.es/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://merchi.es/#servicios</loc>
+    <loc>https://laranadepepito.es/#servicios</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://merchi.es/#galeria</loc>
+    <loc>https://laranadepepito.es/#galeria</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://merchi.es/#contact</loc>
+    <loc>https://laranadepepito.es/#contact</loc>
     <priority>0.6</priority>
   </url>
 </urlset>
