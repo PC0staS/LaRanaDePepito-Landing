@@ -106,11 +106,4 @@ Notas de desarrollo
 - Navbar y comportamiento de scroll están en `Header.astro` con un pequeño JS inline; prueba anchors en dev para ajustar offsets.
 - La animación `fade-up` se gestiona por IntersectionObserver — revisa `Header.astro` si los elementos no aparecen.
 
-¿Quieres que lo actualice por ti?
 
-Puedo:
-- Poner tu dominio directamente en `robots.txt`, `sitemap.xml` y `Layout.astro` ahora.
-- Añadir un script de generación de sitemap en el build.
-- Preparar un `deploy` script para Netlify/Vercel.
-
-Dime qué prefieres y lo aplico.
