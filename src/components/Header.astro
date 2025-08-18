@@ -199,10 +199,7 @@
             else break;
         }
         document.querySelectorAll(".main-nav .nav-link").forEach((a) => {
-            a.classList.toggle(
-                "active",
-                a.getAttribute("href") === "#" + current,
-            );
+            a.classList.toggle("active",a.getAttribute("href") === "#" + current);
         });
     }
     document.addEventListener("scroll", onScroll, { passive: true });

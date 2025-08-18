@@ -72,10 +72,17 @@
                 <div
                     class="map-card h-100 position-relative overflow-hidden rounded-4"
                 >
-                    <div class="ratio ratio-16x9 d-flex align-items-center justify-content-center">
-                        <picture>
-                            <source type="image/webp" srcset="/img/placeholder.webp">
-                            <img src="/img/map.png" alt="Mapa ubicación atelier" loading="lazy" width="1600" height="900">
+                    <div class="ratio ratio-16x9 d-flex align-items-center justify-content-center" style="overflow:hidden;">
+                        <picture style="width:100%;height:100%;">
+                            <source type="image/webp" srcset="/img/placeholder.webp" />
+                            <img
+                                src="/img/map.png"
+                                alt="Mapa ubicación atelier"
+                                loading="lazy"
+                                width="1600"
+                                height="900"
+                                style="width:100%;height:100%;object-fit:cover;object-position:center;"
+                            />
                         </picture>
                     </div>
                     <div class="contact-overlay p-3 p-sm-4">
@@ -142,18 +149,6 @@
         background: #000;
         min-height: 300px;
         box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.15);
-    }
-    .placeholder-map {
-        background: repeating-linear-gradient(
-            45deg,
-            #444,
-            #444 10px,
-            #555 10px,
-            #555 20px
-        );
-        color: #fff;
-        font-size: 0.9rem;
-        letter-spacing: 1px;
     }
     .contact-overlay {
         position: absolute;
