@@ -9,12 +9,18 @@
                 <div
                     class="position-relative rounded-4 overflow-hidden shadow-sm about-photo"
                 >
-                    <img
-                        src="/img/placeholder.jpg"
-                        alt="Mercedes trabajando en el atelier"
-                        class="img-fluid w-100"
-                        style="object-fit:cover; aspect-ratio:3/4;"
-                    />
+                    <picture>
+                        <source type="image/webp" srcset="/img/placeholder.webp">
+                        <img
+                            src="/img/placeholder.jpg"
+                            alt="Mercedes trabajando en el atelier"
+                            class="img-fluid w-100"
+                            style="object-fit:cover; aspect-ratio:3/4;"
+                            loading="lazy"
+                            width="720"
+                            height="960"
+                        />
+                    </picture>
                     <div class="ribbon-small">15+ años</div>
                 </div>
             </div>

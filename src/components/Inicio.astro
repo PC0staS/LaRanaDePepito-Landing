@@ -6,14 +6,16 @@
     class="hero full-bleed position-relative d-flex align-items-center justify-content-center text-center"
     id="inicio"
 >
-    <picture
-        class="hero-media position-absolute top-0 start-0 w-100 h-100 overflow-hidden"
-    >
+    <picture class="hero-media position-absolute top-0 start-0 w-100 h-100 overflow-hidden">
+        <source type="image/webp" srcset="/img/placeholder.webp">
         <img
             src="/img/placeholder.jpg"
             alt="Atelier confeccionando ropa infantil"
             class="w-100 h-100"
             style="object-fit:cover; object-position:center; filter:brightness(.85);"
+            loading="lazy"
+            width="1600"
+            height="900"
         />
     </picture>
     <div
