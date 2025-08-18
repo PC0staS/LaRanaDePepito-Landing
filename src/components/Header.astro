@@ -1,13 +1,28 @@
----
-
----
-
 <header>
-    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top" id="navbar">
-        <div class="container-fluid">
+    <nav
+        class="navbar navbar-expand-md navbar-light navbar-transparent fixed-top text-white"
+        id="navbar"
+    >
+        <div class="container-fluid d-flex align-items-center justify-content-between gap-2">
             <!-- Logo y botón hamburguesa -->
-            <a class="navbar-brand fs-1 ms-3" id="headerlogo" onclick="location.href='/'" style="cursor:pointer">Mercedes Varela</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a
+                class="navbar-brand brand-title ms-2"
+                id="headerlogo"
+                onclick="location.href='#inicio'"
+                style="cursor:pointer"
+            >
+                <span class="d-none d-sm-inline">María Mercedes</span>
+                <span class="d-sm-none">María Mercedes</span>
+            </a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Collapse -->
@@ -15,18 +30,28 @@
                 <div class="row w-100 align-items-center">
                     <div class="col-md-4 d-none d-md-block"></div>
                     <div class="col-12 col-md-8">
-                        <ul class="nav justify-content-md-end justify-content-center w-100">
+                        <ul
+                            class="nav justify-content-md-end justify-content-center w-100 main-nav"
+                        >
                             <li class="nav-item flex-fill text-center">
-                                <a class="nav-link text-dark fs-5" href="#about">Sobre mí</a>
+                                <a class="nav-link fs-5" href="#about"
+                                    >Sobre mí</a
+                                >
                             </li>
                             <li class="nav-item flex-fill text-center">
-                                <a class="nav-link text-dark fs-5" href="#servicios">Servicios</a>
+                                <a class="nav-link fs-5" href="#servicios"
+                                    >Servicios</a
+                                >
                             </li>
                             <li class="nav-item flex-fill text-center">
-                                <a class="nav-link text-dark fs-5" href="#galeria">Galería</a>
+                                <a class="nav-link fs-5" href="#galeria"
+                                    >Galería</a
+                                >
                             </li>
                             <li class="nav-item flex-fill text-center">
-                                <a class="nav-link text-dark fs-5" href="#contact">Contacto</a>
+                                <a class="nav-link fs-5" href="#contact"
+                                    >Contacto</a
+                                >
                             </li>
                         </ul>
                     </div>
@@ -36,7 +61,6 @@
     </nav>
 </header>
 
-
 <style>
     #headerlogo {
         cursor: pointer;
@@ -45,5 +69,206 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
-
+    /* Typography */
+    .navbar .nav-link {
+        font-family: var(--font-sans);
+        font-weight: 500;
+        letter-spacing: 0.3px;
+    }
+    .brand-title {
+        font-family: var(--font-serif);
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        transition:
+            color 0.35s ease,
+            transform 0.35s ease;
+    }
+    .navbar-solid .brand-title {
+        transform: translateY(0);
+    }
+    .navbar-transparent .brand-title {
+        transform: translateY(0);
+    }
+    /* Link & brand color variations */
+    .navbar-transparent .nav-link {
+        color: #fff !important;
+        transition:
+            color 0.25s ease,
+            opacity 0.25s ease;
+    }
+    .navbar-transparent .nav-link:hover {
+        opacity: 0.75;
+    }
+    .navbar-solid .nav-link {
+        color: var(--color-text) !important;
+    }
+    .navbar-solid .nav-link:hover {
+        color: var(--color-text);
+        opacity: 0.7;
+    }
+    .navbar-transparent .brand-title {
+        color: #fff !important;
+        text-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+    }
+    .navbar-solid .brand-title {
+        color: var(--color-text) !important;
+        text-shadow: none;
+    }
+    /* Active state highlight (simple underline) */
+    .main-nav .nav-link.active {
+        position: relative;
+    }
+    .main-nav .nav-link.active:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 4px;
+        width: 28px;
+        height: 2px;
+        background: var(--color-accent);
+        transform: translateX(-50%);
+        border-radius: 2px;
+    }
+    /* Toggler icon visible over dark hero */
+    .navbar-transparent .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.4);
+    }
+    .navbar-transparent .navbar-toggler-icon {
+        filter: invert(1) brightness(1.8);
+    }
+    .navbar-solid .navbar-toggler {
+        border-color: rgba(0, 0, 0, 0.2);
+    }
+    /* Mobile adjustments to keep brand and toggler on one line */
+    .navbar-brand { font-size:1.4rem; white-space:nowrap; }
+    @media (max-width: 575.98px){
+        .navbar-brand { font-size:1.15rem; }
+        .navbar .brand-title span { line-height:1.2; }
+        .navbar-toggler { padding:.4rem .55rem; }
+    }
+    /* Prevent brand from shrinking oddly */
+    .navbar .navbar-brand, .navbar .navbar-toggler { flex-shrink:0; }
+    /* Ensure collapse takes remaining space when open */
+    .navbar .collapse.navbar-collapse { flex-basis:100%; }
 </style>
+<style>
+    /* Fade-up animation (co-located for reliability) */
+    .fade-up {
+        opacity: 0;
+        transform: translateY(40px);
+        transition:
+            opacity 0.8s ease,
+            transform 0.8s ease;
+        will-change: opacity, transform;
+    }
+    .fade-up.is-visible {
+        opacity: 1 !important;
+        transform: translateY(0);
+    }
+    .fade-up.is-visible[data-fade-force] {
+        display: block;
+    }
+</style>
+<script is:inline>
+    const nav = document.getElementById("navbar");
+
+    function setHeaderHeight() {
+        const h = nav.offsetHeight;
+        document.documentElement.style.setProperty("--header-height", h + "px");
+    }
+    window.addEventListener("resize", setHeaderHeight);
+    setHeaderHeight();
+    function onScroll() {
+        if (window.scrollY > 40) {
+            nav.classList.add("navbar-solid");
+            nav.classList.remove("navbar-transparent");
+        } else {
+            nav.classList.add("navbar-transparent");
+            nav.classList.remove("navbar-solid");
+        }
+        highlightActive();
+    }
+    function highlightActive() {
+        const sections = ["inicio", "about", "servicios", "galeria", "contact"];
+        let current = null;
+        const headerH = nav.offsetHeight + 10;
+        for (const id of sections) {
+            const el = document.getElementById(id);
+            if (!el) continue;
+            const top = el.getBoundingClientRect().top;
+            if (top - headerH <= 0) current = id;
+            else break;
+        }
+        document.querySelectorAll(".main-nav .nav-link").forEach((a) => {
+            a.classList.toggle(
+                "active",
+                a.getAttribute("href") === "#" + current,
+            );
+        });
+    }
+    document.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    // IntersectionObserver para fade-up
+    const io = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((e) => {
+                if (e.isIntersecting) {
+                    e.target.classList.add("is-visible");
+                    io.unobserve(e.target);
+                }
+            });
+        },
+        { threshold: 0.15, rootMargin: "0px 0px -5% 0px" },
+    );
+
+    function observeAll() {
+        document
+            .querySelectorAll(".fade-up:not(.is-visible)")
+            .forEach((el) => io.observe(el));
+    }
+    // Initial pass might miss elements parsed after this script tag; defer to DOMContentLoaded
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", observeAll);
+    } else {
+        observeAll();
+    }
+    // Fallback: after a short delay re-scan in case of late-loaded components
+    setTimeout(observeAll, 300);
+    window.addEventListener("astro:after-swap", observeAll);
+    // Safety: if user scrolls far without intersection firing (rare), reveal remaining elements
+    let safetyRevealed = false;
+    window.addEventListener(
+        "scroll",
+        () => {
+            if (!safetyRevealed && window.scrollY > 400) {
+                document
+                    .querySelectorAll(".fade-up:not(.is-visible)")
+                    .forEach((el) => el.classList.add("is-visible"));
+                safetyRevealed = true;
+            }
+        },
+        { passive: true },
+    );
+
+    // Smooth anchor adjustment ensuring section top visible exactly under header
+    function smartScrollTo(hash) {
+        const id = hash.replace("#", "");
+        const el = document.getElementById(id);
+        if (!el) return;
+        const headerH = nav.offsetHeight;
+        const rect = el.getBoundingClientRect();
+        const targetY = window.scrollY + rect.top - headerH + 1; // +1 avoids overlap clip
+        window.scrollTo({ top: targetY, behavior: "smooth" });
+    }
+    document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+            const href = a.getAttribute("href");
+            if (href && href.startsWith("#") && href.length > 1) {
+                e.preventDefault();
+                smartScrollTo(href);
+                history.replaceState(null, "", href);
+            }
+        });
+    });
+    window.addEventListener("load", highlightActive);
+</script>

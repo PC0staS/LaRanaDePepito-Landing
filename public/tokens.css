@@ -1,0 +1,49 @@
+:root {
+  --color-bg: #fdf8f3;
+  --color-bg-alt: #faf4ee;
+  --color-surface: #ffffff;
+  --color-accent: #d9b894;
+  --color-accent-soft: #e8dccf;
+  --color-accent-dark: #cfa67b;
+  --color-text: #1f1f1f;
+  --color-text-muted: #5d544c;
+  --color-line: rgba(0,0,0,.08);
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,.06);
+  --shadow-md: 0 6px 18px rgba(0,0,0,.08);
+  --transition: .35s cubic-bezier(.4,.2,.1,1);
+  --font-serif: 'Playfair Display', 'Times New Roman', serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --header-height: 78px;
+}
+
+body { background: var(--color-bg); color: var(--color-text); }
+
+h1,h2,h3,h4 { font-family: var(--font-serif); letter-spacing:.5px; }
+
+.text-muted-soft { color: var(--color-text-muted)!important; }
+
+.btn-accent { background: var(--color-accent); color: var(--color-text); border:none; border-radius:var(--radius-sm); padding:.85rem 1.6rem; font-weight:500; transition:var(--transition); }
+.btn-accent:hover { background: var(--color-accent-dark); box-shadow: var(--shadow-sm); }
+.btn-ghost { background: rgba(255,255,255,.15); color:#fff; border:1px solid rgba(255,255,255,.3); backdrop-filter: blur(4px); border-radius:var(--radius-sm); padding:.75rem 1.4rem; transition:var(--transition); }
+.btn-ghost:hover { background:rgba(255,255,255,.28); }
+
+.divider-ornamental { display:flex; align-items:center; justify-content:center; gap:.75rem; margin:2rem 0; color:var(--color-text-muted); font-size:.85rem; letter-spacing:2px; }
+.divider-ornamental:before, .divider-ornamental:after { content:""; flex:1; height:1px; background:var(--color-line); }
+
+.fade-up { opacity:0; transform:translateY(28px); transition:var(--transition); }
+.fade-up.is-visible { opacity:1; transform:translateY(0); }
+
+.section-alt { background: var(--color-bg-alt); }
+.full-bleed { width:100vw; margin-left:50%; transform:translateX(-50%); }
+
+.navbar-transparent { background:transparent!important; box-shadow:none!important; transition:var(--transition); }
+.navbar-solid { background:rgba(255,255,255,.92)!important; backdrop-filter:blur(8px); box-shadow:0 4px 20px rgba(0,0,0,.06)!important; }
+
+.metric-block { text-align:center; padding:1.5rem 1rem; }
+.metric-block h3 { font-size:2.4rem; font-family:var(--font-serif); margin-bottom:.25rem; }
+.metric-block p { margin:0; font-size:.9rem; letter-spacing:.5px; text-transform:uppercase; color:var(--color-text-muted); }
+
+/* Anchor sections offset for fixed navbar (skip hero #inicio) */
+section[id]:not(#inicio) { scroll-margin-top: var(--header-height); }
