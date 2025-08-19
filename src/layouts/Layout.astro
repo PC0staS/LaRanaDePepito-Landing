@@ -10,8 +10,15 @@
 		<meta name="robots" content="index, follow" />
 		<meta name="language" content="Spanish" />
 		<meta name="revisit-after" content="7 days" />
+		<meta name="rating" content="General" />
+		<meta name="distribution" content="Global" />
+		<meta name="HandheldFriendly" content="True" />
+		<meta name="MobileOptimized" content="320" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		<link rel="canonical" href="https://laranadepepito.es/" />
 		<link rel="icon" type="image/jpeg" href="/favicon.jpg" />
+		<link rel="manifest" href="/manifest.json" />
 		<meta name="generator" content={Astro.generator} />
 		<title>La Rana De Pepito - Moda Infantil a Medida en Vigo | Atelier Artesanal</title>
 		<meta property="og:site_name" content="La Rana De Pepito" />
@@ -133,6 +140,100 @@
 		  }
 		}
 		</script>
+
+		<!-- FAQ Schema -->
+		<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "FAQPage", 
+		  "mainEntity": [
+		    {
+		      "@type": "Question",
+		      "name": "¿Qué servicios ofrece La Rana De Pepito?",
+		      "acceptedAnswer": {
+		        "@type": "Answer",
+		        "text": "Ofrecemos confección a medida infantil, vestuario de ceremonia para bautizos y comuniones, reciclaje y personalización de prendas, y reformas y adaptaciones de ropa infantil existente."
+		      }
+		    },
+		    {
+		      "@type": "Question", 
+		      "name": "¿Dónde se encuentra el atelier?",
+		      "acceptedAnswer": {
+		        "@type": "Answer",
+		        "text": "Nuestro atelier se encuentra en Camiño Fonte 9, Vigo, Pontevedra. Atendemos con cita previa para asegurar una atención personalizada."
+		      }
+		    },
+		    {
+		      "@type": "Question",
+		      "name": "¿Cuál es el horario de atención?", 
+		      "acceptedAnswer": {
+		        "@type": "Answer",
+		        "text": "Nuestro horario es de lunes a viernes de 10:00 a 19:00 y sábados de 10:00 a 14:00. También disponible bajo cita previa fuera de horario."
+		      }
+		    },
+		    {
+		      "@type": "Question",
+		      "name": "¿Cómo puedo reservar una cita?",
+		      "acceptedAnswer": {
+		        "@type": "Answer", 
+		        "text": "Puedes contactarnos por WhatsApp al +34 686 437 599, por email a merchi.cos@gmail.com, o llamarnos directamente. Recomendamos reservar cita para garantizar disponibilidad."
+		      }
+		    },
+		    {
+		      "@type": "Question",
+		      "name": "¿Qué tipo de tejidos utilizan?",
+		      "acceptedAnswer": {
+		        "@type": "Answer",
+		        "text": "Trabajamos con tejidos suaves y de alta calidad, especialmente seleccionados para la piel delicada de los niños. Priorizamos materiales cómodos, duraderos y seguros."
+		      }
+		    }
+		  ]
+		}
+		</script>
+
+		<!-- Breadcrumb Schema -->
+		<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "BreadcrumbList",
+		  "itemListElement": [
+		    {
+		      "@type": "ListItem",
+		      "position": 1,
+		      "name": "Inicio",
+		      "item": "https://laranadepepito.es/"
+		    },
+		    {
+		      "@type": "ListItem", 
+		      "position": 2,
+		      "name": "Servicios",
+		      "item": "https://laranadepepito.es/#servicios"
+		    },
+		    {
+		      "@type": "ListItem",
+		      "position": 3, 
+		      "name": "Galería",
+		      "item": "https://laranadepepito.es/#galeria"
+		    },
+		    {
+		      "@type": "ListItem",
+		      "position": 4,
+		      "name": "Contacto", 
+		      "item": "https://laranadepepito.es/#contact"
+		    }
+		  ]
+		}
+		</script>
+		<!-- Preload critical resources -->
+		<link rel="preload" as="image" href="/img/placeholder.webp" type="image/webp">
+		
+		<!-- DNS prefetch for external resources -->
+		<link rel="dns-prefetch" href="//www.instagram.com">
+		<link rel="dns-prefetch" href="//www.facebook.com">
+		<link rel="dns-prefetch" href="//wa.me">
+		<link rel="dns-prefetch" href="//www.google.com">
+		<link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+		
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
