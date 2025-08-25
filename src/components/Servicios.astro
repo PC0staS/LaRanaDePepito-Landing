@@ -1,5 +1,7 @@
 ---
-// Servicios rediseñados + métricas de confianza
+import Servicio from './Servicio.jsx';
+import Trayectoria from './Trayectoria.jsx';
+
 ---
 
 <section class="py-5 section-alt mb-0" id="servicios">
@@ -18,114 +20,44 @@
             </p>
         </div>
         <div class="row g-4">
-            <div class="col-md-6 fade-up">
-                <div
-                    class="p-4 h-100 position-relative bg-white rounded-3 shadow-sm"
-                    style="overflow:hidden;"
-                >
-                    <span
-                        class="position-absolute"
-                        style="font-family:var(--font-serif); font-size:5rem; line-height:1; top:-10px; right:10px; opacity:.07;"
-                        >01</span
-                    >
-                    <h3 class="h4 mb-2">Ajustes & Crecimientos</h3>
-                    <p class="mb-3 text-muted-soft">
-                        Alargar bajos, ensanchar, adaptar el talle o modificar
-                        cierres para prolongar la vida de sus prendas favoritas.
-                    </p>
-                    <a
-                        href="#contact"
-                        class="small text-decoration-none"
-                        style="color:var(--color-accent);">Consultar →</a
-                    >
-                </div>
-            </div>
-            <div class="col-md-6 fade-up">
-                <div
-                    class="p-4 h-100 position-relative bg-white rounded-3 shadow-sm"
-                >
-                    <span
-                        class="position-absolute"
-                        style="font-family:var(--font-serif); font-size:5rem; line-height:1; top:-10px; right:10px; opacity:.07;"
-                        >02</span
-                    >
-                    <h3 class="h4 mb-2">Confección a Medida Infantil</h3>
-                    <p class="mb-3 text-muted-soft">
-                        Vestidos, conjuntos, ranitas, camisas y piezas únicas
-                        diseñadas para moverse, jugar y lucir impecables.
-                    </p>
-                    <a
-                        href="#galeria"
-                        class="small text-decoration-none"
-                        style="color:var(--color-accent);">Ver ejemplos →</a
-                    >
-                </div>
-            </div>
-            <div class="col-md-6 fade-up">
-                <div
-                    class="p-4 h-100 position-relative bg-white rounded-3 shadow-sm"
-                >
-                    <span
-                        class="position-absolute"
-                        style="font-family:var(--font-serif); font-size:5rem; line-height:1; top:-10px; right:10px; opacity:.07;"
-                        >03</span
-                    >
-                    <h3 class="h4 mb-2">Ceremonia & Eventos Infantiles</h3>
-                    <p class="mb-3 text-muted-soft">
-                        Conjuntos para comunión y celebraciones familiares:
-                        tejidos suaves, forros cómodos y acabados impecables.
-                    </p>
-                    <a
-                        href="#galeria"
-                        class="small text-decoration-none"
-                        style="color:var(--color-accent);">Ver ejemplos →</a
-                    >
-                </div>
-            </div>
-            <div class="col-md-6 fade-up">
-                <div
-                    class="p-4 h-100 position-relative bg-white rounded-3 shadow-sm"
-                >
-                    <span
-                        class="position-absolute"
-                        style="font-family:var(--font-serif); font-size:5rem; line-height:1; top:-10px; right:10px; opacity:.07;"
-                        >04</span
-                    >
-                    <h3 class="h4 mb-2">Reciclaje & Personalización</h3>
-                    <p class="mb-3 text-muted-soft">
-                        Transformar prendas heredadas, añadir bordados,
-                        iniciales o detalles especiales que las hacen únicas y
-                        afectivas.
-                    </p>
-                    <a
-                        href="#contact"
-                        class="small text-decoration-none"
-                        style="color:var(--color-accent);">Pedir valoración →</a
-                    >
-                </div>
-            </div>
-            <div class="col-md-6 fade-up">
-                <div
-                    class="p-4 h-100 position-relative bg-white rounded-3 shadow-sm"
-                >
-                    <span
-                        class="position-absolute"
-                        style="font-family:var(--font-serif); font-size:5rem; line-height:1; top:-10px; right:10px; opacity:.07;"
-                        >05</span
-                    >
-                    <h3 class="h4 mb-2">Reformas & Adaptaciones</h3>
-                    <p class="mb-3 text-muted-soft">
-                        Ajustes en prendas existentes para un mejor calce y
-                        comodidad, sin perder la esencia del diseño original.
-                    </p>
-                    <a
-                        href="#contact"
-                        class="small text-decoration-none"
-                        style="color:var(--color-accent);">Pedir valoración →</a
-                    >
-                </div>
-            </div>
+
+            <Servicio
+                id="01"
+                title="Ajustes & Crecimientos"
+                description="Alargar bajos, ensanchar, adaptar el talle o modificar cierres para prolongar la vida de sus prendas favoritas."
+                hrefweb="#contact"
+                hreftext="Consultar →"
+            />
+            <Servicio
+                id="02"
+                title="Confección a Medida Infantil"
+                description="Vestidos, conjuntos, ranitas, camisas y piezas únicas diseñadas para moverse, jugar y lucir impecables."
+                hrefweb="#galeria"
+                hreftext="Ver ejemplos →"
+            />
+            <Servicio
+                id="03"
+                title="Ceremonia & Eventos Infantiles"
+                description="Conjuntos para comunión y celebraciones familiares: tejidos suaves, forros cómodos y acabados impecables."
+                hrefweb="#galeria"
+                hreftext="Ver ejemplos →"
+            />
+            <Servicio
+                id="04"
+                title="Reciclaje & Personalización"
+                description="Transformar prendas heredadas, añadir bordados, iniciales o detalles especiales que las hacen únicas y afectivas."
+                hrefweb="#contact"
+                hreftext="Pedir valoración →"
+            />
+            <Servicio
+                id="05"
+                title="Reformas & Adaptaciones"
+                description="Ajustes en prendas existentes para un mejor calce y comodidad, sin perder la esencia del diseño original."
+                hrefweb="#contact"
+                hreftext="Pedir valoración →"
+            />
         </div>
+
         <div class="row mt-5 g-4 fade-up">
             <div class="col-12 text-center mb-3">
                 <h2
@@ -135,29 +67,10 @@
                     Confianza & Experiencia
                 </h2>
             </div>
-            <div class="col-6 col-md-3">
-                <div class="metric-block bg-white rounded-3 shadow-sm">
-                    <h3>15+</h3>
-                    <p>Años</p>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="metric-block bg-white rounded-3 shadow-sm">
-                    <h3>500+</h3>
-                    <p>Prendas</p>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="metric-block bg-white rounded-3 shadow-sm">
-                    <h3>98%</h3>
-                    <p>Satisfacción</p>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="metric-block bg-white rounded-3 shadow-sm">
-                    <h3>300+</h3>
-                    <p>Clientas</p>
-                </div>
+            <Trayectoria titulo="15+" texto="Años" />
+            <Trayectoria titulo="500+" texto="Prendas" />
+            <Trayectoria titulo="98%" texto="Satisfacción" />
+            <Trayectoria titulo="300+" texto="Clientas" />
             </div>
         </div>
     </div>

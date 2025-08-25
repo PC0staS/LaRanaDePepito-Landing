@@ -1,4 +1,6 @@
 ---
+import Steps from "./Steps";
+
 // Componente Sobre Mí para modista
 ---
 
@@ -64,23 +66,9 @@
                     </div>
                 </div>
                 <div class="process mb-4">
-                    <div class="process-step">
-                        <span class="num">1</span><p>
-                            Escuchamos tus necesidades y te asesoramos (tejidos,
-                            cortes, uso).
-                        </p>
-                    </div>
-                    <div class="process-step">
-                        <span class="num">2</span><p>
-                            Pruebas y ajustes para garantizar comodidad y
-                            libertad.
-                        </p>
-                    </div>
-                    <div class="process-step">
-                        <span class="num">3</span><p>
-                            Confección final con detalles personalizados.
-                        </p>
-                    </div>
+                    <Steps num="1" text="Escuchamos tus necesidades y te asesoramos (tejidos, cortes, uso)." />
+                    <Steps num="2" text="Pruebas y ajustes para garantizar comodidad y libertad." />
+                    <Steps num="3" text="Confección final con detalles personalizados." />
                 </div>
                 <blockquote class="quote fade-up">
                     <p class="mb-1">
@@ -133,47 +121,6 @@
     .feat-icon {
         font-size: 1.1rem;
         line-height: 1;
-    }
-    .process {
-        display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
-    }
-    .process-step {
-        flex: 1 1 160px;
-        background: #fff;
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        padding: 0.9rem 0.85rem 0.95rem;
-        border-radius: 12px;
-        position: relative;
-        min-width: 150px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-    }
-    .process-step .num {
-        position: absolute;
-        top: -12px;
-        right: -12px;
-        background: var(--color-accent);
-        color: #fff;
-        width: 34px;
-        height: 34px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        font-weight: 600;
-        font-size: 0.9rem;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    }
-    .process-step p {
-        font-size: 0.74rem;
-        margin: 0;
-        color: var(--color-text-muted);
-    }
-    @media (min-width: 992px) {
-        .process-step p {
-            font-size: 0.78rem;
-        }
     }
     .quote {
         background: #fff;
