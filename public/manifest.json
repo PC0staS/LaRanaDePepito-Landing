@@ -1,0 +1,31 @@
+{
+  "name": "La Rana De Pepito - Moda Infantil a Medida",
+  "short_name": "La Rana De Pepito",
+  "description": "Atelier especializado en moda infantil a medida en Vigo. Confección artesanal, arreglos y personalización de prendas infantiles.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fdf8f3",
+  "theme_color": "#d9b894",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/favicon.jpg", 
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ],
+  "lang": "es",
+  "categories": ["lifestyle", "business", "fashion"],
+  "screenshots": [
+    {
+      "src": "/img/placeholder.webp",
+      "sizes": "1200x800", 
+      "type": "image/webp"
+    }
+  ]
+}
